@@ -5,9 +5,6 @@ const messageDiv = document.getElementById('message');
 buttons.forEach(function(button) {
     button.addEventListener('click', function(e) {
         const colorName = e.target.textContent; // Get the text content of the clicked button
-        messageDiv.textContent = 'You have clicked ' + colorName;
-        messageDiv.style.backgroundColor = 'white';
-        messageDiv.style.color = 'black';
         body.style.backgroundColor = e.target.id;
 
         
