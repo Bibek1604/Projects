@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1B1A55;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background-color: #070F2B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 28px;
+    font-weight: 600;
+    color: #E8E8E8;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    background-color: #29284F;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.input input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #E8E8E8;
+    background-color: transparent;
+    outline: none;
+}
+
+.input button {
+    background-color: #535C91;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input button:hover {
+    background-color: #6D78B3;
+}
+
+/* Styles for the circle and cross */
+.circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #E8E8E8;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cross {
+    cursor: pointer;
+    color: #E8E8E8;
+}
+.cross {
+
+    cursor: pointer;
+    color: #E8E8E8; /* Light gray color for the cross symbol */
+    font-size: 18px; /* Adjust font size */
+    margin-left: 160px; /* Add some space between the text and the cross symbol */
+    transition: color 0.3s ease; /* Smooth transition for color change on hover */
+}
+
+.cross:hover {
+    color: #FF4D4D; /* Red color on hover */
+}
