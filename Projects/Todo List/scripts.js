@@ -3,30 +3,17 @@ const text = document.querySelector('.text');
 
 function Add() {
     if (inp.value === '') {
-        alert("Enter your task list");
+        alert("Please Enter the Text");
     } else {
-        const newEle = document.createElement('li');
-        newEle.textContent = inp.value;
+        const newEl = document.createElement('li');
+        newEl.innerHTML = `${inp.value} <span class="cross">&#10006;</span>`; // Unicode for "cross" symbol
 
-        const removeBtn = document.createElement('span');
-        removeBtn.innerHTML = '&#10006;'; // Unicode for "cross" symbol
-        removeBtn.className = 'cross';
-        removeBtn.addEventListener('click', function () {
-            newEle.remove();
-            saveData();
-        });
-
-        newEle.appendChild(removeBtn);
-        text.appendChild(newEle);
+        text.appendChild(newEl);
         inp.value = '';
-        saveData();
+        newEl.querySelector('.cross').addEventListener('click', remove);
     }
 }
 
-function saveData() {
-    localStorage.setItem('text', text.innerHTML);
-}
-
-function showTask() {
-    text.innerHTML = localStorage.getItem('text');
+function remove() {
+    this.parentElement.remove();
 }
