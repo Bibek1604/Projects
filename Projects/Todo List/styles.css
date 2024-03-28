@@ -4,9 +4,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
     background-color: #1B1A55;
     font-family: 'Roboto', sans-serif;
-    
 }
 
 .container {
@@ -16,7 +16,7 @@ body {
     border-radius: 8px;
     max-width: 400px;
     opacity: 70%;
-    
+    width: 100%;
 }
 
 .header {
@@ -27,9 +27,9 @@ body {
 }
 
 .text {
-    font-size: 18px;
-    font-weight: 600;
-    color: #E8E8E8;
+    color: white;
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
 }
 
 .input {
@@ -81,16 +81,28 @@ body {
     cursor: pointer;
     color: #E8E8E8;
 }
-.cross {
-    align-items: end;
-
-    cursor: pointer;
-    color: #E8E8E8; /* Light gray color for the cross symbol */
-    font-size: 18px; /* Adjust font size */
- /* Add some space between the text and the cross symbol */
-    transition: color 0.3s ease; /* Smooth transition for color change on hover */
-}
 
 .cross:hover {
     color: #FF4D4D; /* Red color on hover */
+}
+
+.fa-trash {
+    margin-left: 5px; /* Adjust the margin as needed */
+    color: white; /* Change the color of the icon */
+    cursor: pointer; /* Change cursor to pointer when hovering over the icon */
+}
+
+.remove-task {
+    cursor: pointer;
+    color: #E8E8E8;
+    margin-left: 5px;
+}
+
+.remove-task:hover {
+    color: #FF4D4D; /* Red color on hover */
+}
+.flex justify-center items-center{
+    display:flex;
+    flex-direction: column;
+    font-size: small;
 }
