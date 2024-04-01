@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css" />
+<body>
+    <h1>Let's Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">End</button>
+
+    <!-- <script>
+        const date = function() {
+            console.log('Hello', Date.now());
+        }
+        const intervald = setInterval(date, 1000);
+        clearInterval(intervald);
+    </script> -->
+    
+</body>
+<script>
+    const randomColor = function() {
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    };
+
+    let intervalId; // Declare intervalId in the outer scope to make it accessible to other functions
+
+    const changeColor = function() {
+        intervalId = setInterval(changeBackgroundColor, 1000);
+
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = randomColor();
+        }
+    };
+
+    const stopChangingColor = function() {
+        clearInterval(intervalId);
+    };
+
+    document.getElementById('start').addEventListener('click', changeColor); // Corrected function name
+    document.getElementById('stop').addEventListener('click', stopChangingColor);
+</script>
+</html>
