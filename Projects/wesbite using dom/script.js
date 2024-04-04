@@ -1,42 +1,65 @@
-// Get the content div by its id
-const contentDiv = document.getElementById('content');
-
-// Create a nav element for the navigation bar
-const nav = document.createElement('nav');
-
-// Create an unordered list for the navigation links
+// Navbar creation
+const navbar = document.createElement('nav');
 const ul = document.createElement('ul');
+const homeLink = createNavLink('Home', '#');
+const aboutLink = createNavLink('About', '#');
+const contactLink = createNavLink('Contact', '#');
 
-// Create list items for each navigation link
-const homeLi = document.createElement('li');
-const aboutLi = document.createElement('li');
-const contactLi = document.createElement('li');
+ul.appendChild(homeLink);
+ul.appendChild(aboutLink);
+ul.appendChild(contactLink);
+navbar.appendChild(ul);
 
-// Create anchor elements for each navigation link
-const homeLink = document.createElement('a');
-homeLink.href = '#';
-homeLink.textContent = 'Home';
+// Function to handle clicking on Home link
+function handleHomeLinkClick() {
+    contentDiv.innerHTML = `
+        <h2>Welcome to DOM Website!</h2>
+        <p>This is a simple example of a website created using DOM manipulation.</p>
+    `;
+}
 
-const aboutLink = document.createElement('a');
-aboutLink.href = '#';
-aboutLink.textContent = 'About';
+function handleAboutLinkClick() {
+    contentDiv.innerHTML = `
+        <h2>About Us</h2>
+        <p>We are a team of developers who are passionate about web development.</p>
+    `;  
+}
+aboutLink.addEventListener('click', handleAboutLinkClick);
 
-const contactLink = document.createElement('a');
-contactLink.href = '#';
-contactLink.textContent = 'Contact';
+function handleContactLinkClick() {
+    contentDiv.innerHTML = `
+        <h2>Contact Us</h2>
+        <p>Email:npbibek94@gmail.com</p>
+        <img src="https://www.w3schools.com/images/picture.jpg" alt="Contact us" style="width:100%">
+`;
+    }
 
-// Append anchor elements to list items
-homeLi.appendChild(homeLink);
-aboutLi.appendChild(aboutLink);
-contactLi.appendChild(contactLink);
+contactLink.addEventListener('click', handleContactLinkClick);
+// Add event listener to Home link
+homeLink.addEventListener('click', handleHomeLinkClick);
 
-// Append list items to the unordered list
-ul.appendChild(homeLi);
-ul.appendChild(aboutLi);
-ul.appendChild(contactLi);
+// Footer creation
+const footer = document.createElement('footer');
+const footerText = document.createTextNode('© 2024 DOM Website. All rights reserved.');
+footer.appendChild(footerText);
 
-// Append the unordered list to the navigation bar
-nav.appendChild(ul);
+// Append navbar and footer to the body
+document.body.prepend(navbar);
+document.body.appendChild(footer);
 
-// Append the navigation bar to the content div
-contentDiv.appendChild(nav);
+// Function to create nav link
+function createNavLink(text, href) {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.textContent = text;
+    a.href = href;
+    li.appendChild(a);
+    return li;
+}
+
+// Populate content div initially
+const contentDiv = document.getElementById('content');
+contentDiv.innerHTML = `
+    <h2>Welcome to DOM Website!</h2>
+    <p>This is a simple example of a website created using DOM manipulation here in this portion i have my webte to show you.</p>
+`;
