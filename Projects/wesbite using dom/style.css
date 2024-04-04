@@ -49,16 +49,23 @@ footer {
 }
 
 #content h2 {
-    color: #333;
+    color: #dad5d5;
     font-size: 24px;
 }
 
 #content p {
-    color: #555555;
+    color: #7f7d7d;
     font-size: 16px;
 }
 
 #content img {
     width: 100%;
     max-width: 400px;
+}
+#content{
+    background-color: #271f4c;
+    background-size: 100%;
+}
+#contentDiv h2{
+    color: white;
 }
