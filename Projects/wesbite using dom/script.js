@@ -1,16 +1,25 @@
 // Navbar creation
 const navbar = document.createElement('nav');
 const ul = document.createElement('ul');
+const MainLink = createNavLink('Main', '#');
 const homeLink = createNavLink('Home', '#');
 const aboutLink = createNavLink('About', '#');
 const contactLink = createNavLink('Contact', '#');
 
+ul.appendChild(MainLink);
 ul.appendChild(homeLink);
 ul.appendChild(aboutLink);
 ul.appendChild(contactLink);
 navbar.appendChild(ul);
 
 // Function to handle clicking on Home link
+
+function handleMainLinkClick() {
+    contentDiv.innerHTML = `
+        <h2>Welcome to Main Page of  Website!</h2>
+        <p>To see the all the information of other tag of nav click them .</p>
+    `
+}
 function handleHomeLinkClick() {
     contentDiv.innerHTML = `
         <h2>Welcome to DOM Website!</h2>
