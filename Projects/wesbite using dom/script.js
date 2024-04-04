@@ -1,42 +1,42 @@
-// Create a new HTML document
-const doc = document.implementation.createHTMLDocument('My Website');
+// Get the content div by its id
+const contentDiv = document.getElementById('content');
 
-// Create a <head> element and add it to the document
-const navbar =document.createElement('nav');
-const li = document.createElement('li');
-const home = document.createElement('home','#');
-const about = document.createElement('about','#');
-const contact = document.createElement('contact','#');
+// Create a nav element for the navigation bar
+const nav = document.createElement('nav');
 
-navbar.appendChild(li);
-doc.documentElement.appendChild(navbar);
+// Create an unordered list for the navigation links
+const ul = document.createElement('ul');
 
-const head = doc.createElement('head');
-doc.documentElement.appendChild(head);
+// Create list items for each navigation link
+const homeLi = document.createElement('li');
+const aboutLi = document.createElement('li');
+const contactLi = document.createElement('li');
 
-// Create a <title> element and set its text content
-const title = doc.createElement('title');
-title.textContent = 'My Website';
-head.appendChild(title);
+// Create anchor elements for each navigation link
+const homeLink = document.createElement('a');
+homeLink.href = '#';
+homeLink.textContent = 'Home';
 
-// Create a <body> element and add it to the document
-const body = doc.createElement('body');
-doc.documentElement.appendChild(body);
+const aboutLink = document.createElement('a');
+aboutLink.href = '#';
+aboutLink.textContent = 'About';
 
-// Create a <h1> element for the heading
-const heading = doc.createElement('h1');
-heading.textContent = 'Welcome to My Website';
-body.appendChild(heading);
+const contactLink = document.createElement('a');
+contactLink.href = '#';
+contactLink.textContent = 'Contact';
 
-// Create a <p> element for some text content
-const paragraph = doc.createElement('p');
-paragraph.textContent = 'This is a paragraph of text on my website.';
-body.appendChild(paragraph);
+// Append anchor elements to list items
+homeLi.appendChild(homeLink);
+aboutLi.appendChild(aboutLink);
+contactLi.appendChild(contactLink);
 
-// Create a <footer> element for the footer
-const footer = doc.createElement('footer');
-footer.textContent = '© 2024 My Website';
-body.appendChild(footer);
+// Append list items to the unordered list
+ul.appendChild(homeLi);
+ul.appendChild(aboutLi);
+ul.appendChild(contactLi);
 
-// Convert the document to a string and set it as the HTML content of the current webpage
-document.documentElement.innerHTML = doc.documentElement.innerHTML;
+// Append the unordered list to the navigation bar
+nav.appendChild(ul);
+
+// Append the navigation bar to the content div
+contentDiv.appendChild(nav);
