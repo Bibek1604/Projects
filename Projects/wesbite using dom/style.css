@@ -1,7 +1,7 @@
 /* Navbar styles */
 nav {
     background-color: #333;
-    color: #fff;
+    color: #000000;
     padding: 10px 20px;
 }
 
@@ -9,6 +9,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    color: black;
 }
 
 ul li {
