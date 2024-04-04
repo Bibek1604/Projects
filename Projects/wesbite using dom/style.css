@@ -1,7 +1,7 @@
 /* Navbar styles */
 nav {
     background-color: #271f4c;
-    color: #a76cce;
+    color: #473495;
     padding: 10px 20px;
     font-family: 'Poppins', sans-serif;
 }
@@ -18,7 +18,7 @@ ul li {
 }
 
 ul li a {
-    color: #fff;
+    color: #3da1a1;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
