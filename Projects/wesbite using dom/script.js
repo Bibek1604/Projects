@@ -22,8 +22,7 @@ function handleMainLinkClick() {
 }
 function handleHomeLinkClick() {
     contentDiv.innerHTML = `
-        <h2>Welcome to DOM Website!</h2>
-        <p>This is a simple example of a website created using DOM manipulation.</p>
+    <img src="profile.png"  style="width:100% height=100px">
     `;
 }
 
