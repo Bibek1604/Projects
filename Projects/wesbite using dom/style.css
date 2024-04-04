@@ -1,7 +1,7 @@
 /* Navbar styles */
 nav {
     background-color: #271f4c;
-    color: #473495;
+    color: white;
     padding: 10px 20px;
     font-family: 'Poppins', sans-serif;
 }
@@ -18,7 +18,7 @@ ul li {
 }
 
 ul li a {
-    color: #6f3099;
+    color: #b572e2;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -26,13 +26,13 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: #444;
+    background-color: #613c89c3;
 }
 
 /* Footer styles */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #271f4c;
+    color: #b572e2;
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -54,7 +54,7 @@ footer {
 }
 
 #content p {
-    color: #555;
+    color: #555555;
     font-size: 16px;
 }
 
