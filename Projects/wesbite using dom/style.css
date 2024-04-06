@@ -35,7 +35,7 @@ footer {
     color: #b572e2;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position:static;
     bottom: 0;
     width: 100%;
     font-family: 'Poppins', sans-serif;
@@ -68,4 +68,20 @@ footer {
 }
 #contentDiv h2{
     color: white;
+}
+.resume-section {
+    margin-bottom: 20px;
+}
+
+.resume-section h4 {
+    margin-bottom: 10px;
+}
+
+.resume-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resume-section ul li {
+    margin-bottom: 5px;
 }

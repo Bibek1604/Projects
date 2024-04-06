@@ -18,23 +18,6 @@ function handleHomeLinkClick() {
     `;
 }
 
-function handleAboutLinkClick() {
-    contentDiv.innerHTML = `
-        <h2>About Us</h2>
-        <p>We are a team of developers who are passionate about web development.</p>
-    `;  
-}
-aboutLink.addEventListener('click', handleAboutLinkClick);
-
-function handleContactLinkClick() {
-    contentDiv.innerHTML = `
-        <h2>Contact Us</h2>
-        <p>Email:npbibek94@gmail.com</p>
-        <img src="https://www.w3schools.com/images/picture.jpg" alt="Contact us" style="width:100%">
-`;
-    }
-
-contactLink.addEventListener('click', handleContactLinkClick);
 // Add event listener to Home link
 homeLink.addEventListener('click', handleHomeLinkClick);
 
@@ -61,5 +44,5 @@ function createNavLink(text, href) {
 const contentDiv = document.getElementById('content');
 contentDiv.innerHTML = `
     <h2>Welcome to DOM Website!</h2>
-    <p>This is a simple example of a website created using DOM manipulation here in this portion i have my webte to show you.</p>
+    <p>This is a simple example of a website created using DOM manipulation.</p>
 `;
